@@ -39,7 +39,7 @@ export default function DynamicGradient2() {
     setColors([...colors, "#000000"]); // add a new color (default black)
   }
   function removeColor(index) {
-    setColors(colors.filter((_, i) => i !== index)); //removes color[index] from the array
+    setColors(colors.filter((x, i) => i != index)); //removes color[index] from the array. the filter function always passes two arguments to the callback: the element and the index, hence the need for x even though its not used
   }
 
   return (
